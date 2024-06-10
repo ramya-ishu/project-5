@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>java script</title>
+<style>
+body {
+background-image:url("Reg.jpg")
+}
+</style>
+<script>
+function validateform(){
+const dobInput = document.getElementById("Date of Birth");
+const dob = new Date(dobInput.value);
+const currentDate = new Date();
+
+//check if the date is valid and in the past 
+if (isNaN(dob) || dob > currentDate) {
+alret("please choose the date of birth.");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form action="loginform.html" onsubmit="validateform()">
+<h1>Register Form</h1>
+<br>
+First Name:
+<input type="text" name="sname"> 
+<h3>Middle Name:</h3>
+<input type="text" name="midname"> 
+<br>
+<h3>Last Name:</h3>
+<input type="text" name="lastname"> 
+<br>
+<h3>Father Name:</h3>
+<input type="text" name="fname">
+ <br>
+<h3>Mother name:</h3>
+<input type="text" name="mname">
+ <br>
+<h3>Gender:</h3>
+<br>
+<input type="radio" name="gender" value="M">Male<br>
+<input type="radio" name="gender" value="F">female<br>
+<input type="radio" name="gender" value="O">others<br>
+<h3>phone:</h3>
+<input type="text" name="phone" size"10">
+ <br>
+<h3>Date of Birth:</h3>
+<input type="date" name="birthday" id="date of birth">
+<br>
+<h3>Email:</h3>
+<input type="email" name="mail" id="mail">
+ <br>
+<h3>Address:</h3>
+<br>
+<textarea name="address" cols="35" row="45">
+Textarea.......
+</textarea> 
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
